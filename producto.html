@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Incorporar Vuejs mediante uso de cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <!-- Incorporar Axios mediante uso de cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+
+    
+    <title>Clon | mitienda.moda</title>
+</head>
+<body>
+  <div id="app">
+    {{ info }}
+
+    <div v-for="item1 in info">
+      <!-- {{ item1 }} -->
+      <div v-for="item2 in item1.data">
+        {{ item2.name }}
+        <img :src="url+item2.image" alt="no se puede ver">
+      </div>
+    </div>
+  </div>
+
+
+
+    <script src="producto.js"></script>  <!-- Incorporar script vue para obtener datos-->
+</body>
+</html>

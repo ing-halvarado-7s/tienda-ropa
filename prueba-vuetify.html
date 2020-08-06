@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="theme-color" content="#f06292">
+        <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+        <!--[if IE]><link rel="icon" href="" /><![endif]-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100:300,400,500,700,900|Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <title>CATALOGO MODA - MiTienda.moda</title>
+        <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-59323531-6"></script>
+
+        <!-- La etiqueta global de sitio web (gtag.js) es una API y un sistema de etiquetado de JavaScript que permite enviar datos de eventos a Google Analytics, Google Ads y Google Marketing Platform. -->
+        <script>
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+            dataLayer.push(arguments)
+            }
+            gtag('js', new Date())
+            gtag('config', 'UA-59323531-6')
+        </script>
+
+
+        <!-- El código de seguimiento de Hotjar se utiliza para activar la recopilación de datos cuando se instala en su sitio. Este código es responsable de recopilar y enviar los datos a su cuenta de Hotjar. La instalación implica copiar y pegar su código de seguimiento único dentro del sitio que desea rastrear. -->
+        <script>;(function(h, o, t, j, a, r) {
+            h.hj =
+                h.hj ||
+                function() {
+                ;(h.hj.q = h.hj.q || []).push(arguments)
+                }
+            h._hjSettings = { hjid: 1050891, hjsv: 6 }
+            a = o.getElementsByTagName('head')[0]
+            r = o.createElement('script')
+            r.async = 1
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv
+            a.appendChild(r)
+            })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=')
+    
+            if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js').then(function() {
+                console.log('Service Worker Registered')
+            })
+    
+            var refreshing
+            navigator.serviceWorker.addEventListener(
+                'controllerchange',
+                function() {
+                if (refreshing) return
+                refreshing = true
+                window.location.reload()
+                }
+            )
+    
+            window.addEventListener('activate', function(event) {
+                event.waitUntil(
+                caches.keys().then(function(cacheNames) {
+                    return Promise.all(
+                    cacheNames
+                        .filter(function(cacheName) {
+                        return true
+                        })
+                        .map(function(cacheName) {
+                        return caches.delete(cacheName)
+                        })
+                    )
+                })
+                )
+            })
+    
+            window.addEventListener('appinstalled', evt => {
+                alert(
+                'Recuerda que puedes utilizar nuestra app abriendola desde el menú de inicio.'
+                )
+                app.logEvent('a2hs', 'installed')
+            })
+            }
+        </script>
+        
+        
+        <script async="" src="https://static.hotjar.com/c/hotjar-1050891.js?sv=6"></script>
+        <base href="/"><link href="bundle.js" rel="preload" as="script">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#4DBA87">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="white">
+        <meta name="apple-mobile-web-app-title" content="MiTienda.moda">
+        <link rel="apple-touch-icon" href="img/icons/apple-touch-icon-152x152.png">
+        <link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#4DBA87">
+        <meta name="msapplication-TileImage" content="img/icons/msapplication-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#000000">
+
+       <!-- Inccorporar Vuetify mediante el uso de CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+        <!-- Incorporar Vuejs mediante uso de cdn -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script> -->
+        <!-- Incorporar Axios mediante uso de cdn -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+
+
+
+    </head>
+<body>
+    <div id="app">
+        <v-app>
+          <v-main>
+            <v-container>Hello world</v-container>
+          </v-main>
+        </v-app>
+      </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+    })
+  </script>
+</body>
+</html>

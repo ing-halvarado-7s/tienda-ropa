@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <!-- Incorporar Vuejs mediante uso de cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+  <!-- Incorporar Axios mediante uso de cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <template>
+        <v-app>
+            <v-card
+              color="grey lighten-4"
+              flat              
+              tile
+            >
+              <v-toolbar dense fixed class="blue-grey lighten-5">        
+                <v-toolbar-title class="pink--text text--ligtten-2">Cliente Pruebas</v-toolbar-title>         
+                <v-spacer></v-spacer>
+          
+                <v-btn icon class="pink--text text--ligtten-2">
+                    <v-icon>mdi-phone</v-icon>
+                </v-btn>
+                <v-btn icon class="pink--text text--ligtten-2">
+                  <v-icon>mdi-exit-to-app</v-icon>
+                </v-btn>
+              </v-toolbar>
+            </v-card>
+            
+
+      <v-main >
+        <v-container>
+          <v-layout wrap>
+            <v-flex xs12 sm8 md5 lg4>
+              <!-- <v-subheader grey--text category-title text-uppercase pl-2 theme--light style="font-size: 1.5em;">Líneas</v-subheader> -->
+            </v-flex>
+            <v-flex xs12 sm8 md5 lg4>
+              <v-card flat>
+                <v-container pa-1 mt-1>
+                  <div v-for="item1 in info">
+                    <v-img :src="url+item1.image"></v-img>
+                                        
+                  </div>
+                </v-container>
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </v-main>
+     
+    </v-app>
+</template>
+
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <!-- <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+    })
+  </script> -->
+  <script src="catalog.js"></script>  <!-- Incorporar script vue para obtener datos-->
+</body>
+</html>
